@@ -29,10 +29,16 @@
   "devDependencies": {
     "commitizen": "4.0.3",
     "cz-conventional-changelog": "3.0.2",
+    "ghooks": "2.0.4",
     "jest": "24.9.0",
     "semantic-release": "^15.14.0"
   },
   "czConfig": {
     "path": "node_modules/cz-conventional-changelog"
+  },
+  "config": {
+    "ghooks":{
+      "pre-commit": "yarn test"
+    }
   }
 }
