@@ -5,7 +5,8 @@
   "main": "src/index.js",
   "scripts": {
     "commit": "git-cz",
-    "test": "jest",
+    "test": "jest --config jest.config.json",
+    "reportCoverage": "cat ./coverage/lcov.info | codecov",
     "semantic-release": "semantic-release"
   },
   "repository": {
@@ -27,9 +28,12 @@
     "unique-random-array": "2.0.0"
   },
   "devDependencies": {
+    "codecov": "3.6.1",
+    "codecov.io": "0.1.6",
     "commitizen": "4.0.3",
     "cz-conventional-changelog": "3.0.2",
     "ghooks": "2.0.4",
+    "istanbul": "0.4.5",
     "jest": "24.9.0",
     "semantic-release": "^15.14.0"
   },
@@ -37,7 +41,7 @@
     "path": "node_modules/cz-conventional-changelog"
   },
   "config": {
-    "ghooks":{
+    "ghooks": {
       "pre-commit": "yarn test"
     }
   }
