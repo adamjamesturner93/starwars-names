@@ -1,6 +1,10 @@
 os: linux
 language: node_js
-cache:
+node_js:
+  - stable
+  - lts/*
+
+  cache:
   directories:
     - node_modules
 
@@ -13,5 +17,3 @@ jobs:
       after_success: 
         - bash <(curl -s https://codecov.io/bash)
         - yarn semantic-release
-
-      
