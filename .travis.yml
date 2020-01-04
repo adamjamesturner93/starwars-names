@@ -14,3 +14,8 @@ jobs:
         cleanup: false
         script:
           - npx semantic-release
+    - stage: after-success
+      # Advanced: optionally overwrite your default `script` step to skip the tests
+      # script: skip
+      script: yarn report-coverage
+      

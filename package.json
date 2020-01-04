@@ -7,7 +7,7 @@
     "commit": "git-cz",
     "test": "jest --config jest.config.json",
     "report-coverage": "bash <(curl -s https://codecov.io/bash)",
-    "semantic-release": "semantic-release && yarn report-coverage"
+    "semantic-release": "semantic-release"
   },
   "repository": {
     "type": "git",
