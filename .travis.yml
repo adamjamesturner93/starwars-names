@@ -1,13 +1,12 @@
 language: node_js
 
 node_js:
-  - 10
+  - lts/*
 
 jobs:
   include:
     # Define the release stage that runs semantic-release
     - stage: release
-      node_js: lts/*
       # Advanced: optionally overwrite your default `script` step to skip the tests
       # script: skip
       deploy:
@@ -16,5 +15,8 @@ jobs:
         script:
           - npx semantic-release
     - stage: after_success
-      script:
-        - yarn reportCoverage
+        provider: script
+        skip_cleanup: true
+        script:
+          - yarn report-coverage
+        

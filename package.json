@@ -6,7 +6,7 @@
   "scripts": {
     "commit": "git-cz",
     "test": "jest --config jest.config.json",
-    "reportCoverage": "cat ./coverage/lcov.info | codecov",
+    "report-coverage": "bash <(curl -s https://codecov.io/bash)",
     "semantic-release": "semantic-release"
   },
   "repository": {
