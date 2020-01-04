@@ -6,6 +6,9 @@ describe("starwars-names", () => {
     test("should contain all values from the JSON input file", () => {
       expect(starwars.all).toEqual(expect.arrayContaining(starWarsNames));
     });
+    test('should contain Ben Skywalker', () => {
+      expect(starwars.all).toContain('Ben Skywalker');
+    });
   });
   describe("Random", () => {
     it("should return a random value from starwars.all", () => {
