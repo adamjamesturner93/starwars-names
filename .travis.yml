@@ -4,7 +4,7 @@ node_js:
   - stable
   - lts/*
 
-  cache:
+cache:
   directories:
     - node_modules
 
