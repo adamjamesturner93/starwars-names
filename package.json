@@ -28,7 +28,7 @@
     "unique-random-array": "2.0.0"
   },
   "devDependencies": {
-    "codecov": "3.6.1",
+    "codecov": "3.7.1",
     "codecov.io": "0.1.6",
     "commitizen": "4.0.3",
     "cz-conventional-changelog": "3.0.2",
